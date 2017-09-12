@@ -22,15 +22,27 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 
 	<!-- JQuery JS -->
-	<script src="js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
   <script src="js/movement.js"></script>
 
+
+	<script>
+  var div = $( "div" )[ 0 ];
+  $( "#userInput" ).text("UserInput Var Here!");
+  $( "#avocadoInput" ).text("Avocado Var Here!");
+  $( "#bitcoinInput" ).text("Bitcoin Var Here!");
+  </script>
+
+	<!--Javascript backend to call API-->
+	<script src="js/data-get.js"></script>
+
+
 </head>
 
-<body style="background-color: #daf1e8">
+<body>
 
   <div class="container">
 		<div class="full-page">
@@ -232,14 +244,6 @@
 	</div> -->
 
 
-  <script>
-  var div = $( "div" )[ 0 ];
-  $( "#userInput" ).text("UserInput Var Here!");
-  $( "#avocadoInput" ).text("Avocado Var Here!");
-  $( "#bitcoinInput" ).text("Bitcoin Var Here!");
-  </script>
 
-	<!--Javascript backend to call API-->
-	<script src="js/data-get.js"></script>
 
   </html>

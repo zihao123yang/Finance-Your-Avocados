@@ -3,9 +3,45 @@
   width: 0;
 }
 
+body {
+  background-color: #DBE6DC;
+}
+
+.header {
+  font-family: 'Lobster', cursive;
+  font-size: 9em;
+}
+
+@media only screen and (max-device-width: 480px) {
+  /* define mobile specific styles come here */
+  .header {
+    font-family: 'Lobster', cursive;
+    font-size:6em;
+  }
+}
+
 .background {
   color: solid black;
 }
+
+.search-field{
+  background-color: #cec9c6 !important;
+  border-radius: 10px !important;
+  padding-left: 10px !important;
+  color: #000 !important;
+  border-top-right-radius:3px;
+  border-top-left-radius:3px;
+  border-bottom-right-radius3px;
+  border-bottom-left-radius:3px;
+  margin:3 3 3 3;
+}
+
+/*This styles the search text before input*/
+.search-field::placeholder{
+  color: #768267;
+}
+
+
 .img {
   width: 45px;
   left: -20px;
@@ -13,6 +49,10 @@
   position: absolute;
   transition: all 0.5s linear;
 }
+
+
+
+/* random icons */
 .avocado {
   width: 200px;
   position: relative;
