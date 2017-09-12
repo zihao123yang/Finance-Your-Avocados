@@ -33,7 +33,7 @@ body {
   background-color: #cec9c6 !important;
   border-radius: 10px !important;
   padding-left: 10px !important;
-  color: ##341b14 !important;
+  color: #341b14 !important;
   border-top-right-radius:3px;
   border-top-left-radius:3px;
   border-bottom-right-radius3px;
@@ -125,4 +125,11 @@ body {
   height: 29px;
   transition: all 0.5s linear;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
