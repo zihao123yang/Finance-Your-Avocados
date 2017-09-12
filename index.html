@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<!--jQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
 
 	<!-- lobster header font-->
@@ -21,11 +23,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<!--Stylesheet import-->
 	<link href="css/styles.css" rel="stylesheet">
+
+	<!--Javascript backend to call API-->
+	<script src="js/data-get.js"></script>
 </head>
 
 <body>
   <div class="container">
-      <h1 class="header black-text center">Finance your Avocados!</h1>
+      <h1 class="header black-text center" style="padding-top: 20vh;">Finance your Avocados!</h1>
       <div class="row center">
         <!-- SEARCH FORM -->
 				<form action="/result" method="GET">
@@ -34,24 +39,11 @@
 								<input id="icon_prefix" type="text" name="searchbar" class="search-field" placeholder="Enter how much money you have">
 							</div>
 								<div class="row center col s12">
-            			<input type="submit" value="Convert! 🥑" name="convertButton" class="center btn" onclick="">
+            			<input type="submit" value="Convert!" name="convertButton" class="center btn" onclick="">
 								</div>
           </div>
 				</form>
       </div>
 	</div>
-
-
-
-
-  <script>
-  var div = $( "div" )[ 0 ];
-  $( "#userInput" ).text("UserInput Var Here!");
-  $( "#avocadoInput" ).text("Avocado Var Here!");
-  $( "#bitcoinInput" ).text("Bitcoin Var Here!");
-  </script>
-
-	<!--Javascript backend to call API-->
-	<script src="js/data-get.js"></script>
 
   </html>
