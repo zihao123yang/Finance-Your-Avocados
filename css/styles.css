@@ -1,0 +1,83 @@
+.meter {
+  height: 50px;
+  width: 0;
+}
+
+.background {
+  color: solid black;
+}
+.img {
+  width: 45px;
+  left: -20px;
+  top: 0;
+  position: absolute;
+  transition: all 0.5s linear;
+}
+.avocado {
+  width: 200px;
+  position: relative;
+  padding-top: 50px;
+}
+.avocadoImg {
+  fill: #73C8A9;
+  margin-left: 40%;
+}
+.avocadoMeterOuter {
+  width: 100%;
+  height: 30px;
+  background-color: #73C8A9;
+  border: 1px solid #2b6e55;
+  margin-left: 40%;
+}
+.avocadoMeterInner {
+  background-color: #2b6e55;
+  border: 1px solid #2b6e55;
+  height: 29px;
+  transition: all 0.5s linear;
+}
+
+.bitCoin {
+  width: 200px;
+  position: relative;
+  padding-top: 50px;
+}
+.bitCoinImg {
+  fill: #73C8A9;
+  margin-left: 40%;
+}
+.bitCoinMeterOuter {
+  width: 100%;
+  height: 30px;
+  background-color: #73C8A9;
+  border: 1px solid #2b6e55;
+  margin-left: 40%;
+}
+.bitCoinMeterInner {
+  background-color: #2b6e55;
+  border: 1px solid #2b6e55;
+  height: 29px;
+  transition: all 0.5s linear;
+}
+.house {
+  width: 200px;
+  position: relative;
+  padding-top: 50px;
+}
+.houseImg {
+  fill: #73C8A9;
+  margin-left: 40%;
+}
+.houseMeterOuter {
+  width: 100%;
+  height: 30px;
+  background-color: #73C8A9;
+  border: 1px solid #2b6e55;
+  margin-left: 40%;
+}
+.houseMeterInner {
+  background-color: #2b6e55;
+  border: 1px solid #2b6e55;
+  height: 29px;
+  transition: all 0.5s linear;
+}
+/*# sourceMappingURL=styles.css.map */
