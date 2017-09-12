@@ -12,6 +12,11 @@ body {
   font-size: 9em;
 }
 
+.header-results {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+}
+
 @media only screen and (max-device-width: 480px) {
   /* define mobile specific styles come here */
   .header {
@@ -28,7 +33,7 @@ body {
   background-color: #cec9c6 !important;
   border-radius: 10px !important;
   padding-left: 10px !important;
-  color: #000 !important;
+  color: ##341b14 !important;
   border-top-right-radius:3px;
   border-top-left-radius:3px;
   border-bottom-right-radius3px;
@@ -38,7 +43,7 @@ body {
 
 /*This styles the search text before input*/
 .search-field::placeholder{
-  color: #000;
+  color: #765f50;
 }
 
 

@@ -10,12 +10,39 @@ function money_avo(money){
 	return no_avos;
 }
 
-function money_house(money){
-	house_percent = (money*100)/1044303;
+function money_house(){
+	var regex = /searchbar=(.+)&/;
+	var url = window.location.href;
+	var amount = parseInt(url.match(regex)[1]);
+	house_percent = (amount*100)/1044303;
 	house_percent = house_percent.toFixed(1);
-
-	return house_percent;
+	return (house_percent);
 }
+
+<!--display bar value functions-->
+function money_house_bar(){
+	var regex = /searchbar=(.+)&/;
+	var url = window.location.href;
+	var amount = parseInt(url.match(regex)[1]);
+	house_percent = (amount*100)/1044303;
+	house_percent = house_percent.toFixed(1);
+	if (house_percent > 100) {
+		house_percent = 100;
+	}
+	return (house_percent);
+}
+
+function bitcoin_bar(bit_amount){
+	bit_amount = bit_amount * 100
+	if (bit_amount > 100) {
+		bit_amount = 100;
+		console.log(bit_amount, "bit amount bar 100")
+	}
+	console.log(bit_amount, "bit amount bar < 100")
+	return bit_amount;
+}
+<!--end bar value functions-->
+
 
 function avo_money(no_avos){
 	money = (no_avos*0.17)*12.95;
@@ -73,22 +100,22 @@ function conversion() {
 
 function display(numBitcoins) {
 	$( "#bitcoin" ).text(numBitcoins + " Bitcoins" );
-	console.log("displaying correctly ")
+	console.log("bitcoins displaying correctly ")
 }
 
 function displayAvo(noAvo) {
 	$( "#avo" ).text(noAvo + " Avocados" );
-	console.log("displaying correctly ")
+	console.log("avocados displaying correctly ")
 }
 
 function displayHouse(house) {
 	$( "#house" ).text(house + "% of a house" );
-	console.log("displaying correctly ")
+	console.log("house displaying correctly ")
 }
 
 function displayAmount(useramount) {
 	$( "#useramount" ).text("With $" + useramount + " you can buy..." );
-	console.log("displaying correctly ")
+	console.log("user amount displaying correctly ")
 }
 
 function getInput() {
@@ -96,8 +123,8 @@ function getInput() {
 	var url = window.location.href;
 	var amount = parseInt(url.match(regex)[1]);
 
-	console.log("get input test");
-	console.log(amount)
+	console.log("getinput done");
+	console.log(amount, "getInput amount")
 	displayAmount(amount)
 	getBitCoinInfo(amount)
 	var no_avo = money_avo(amount)
@@ -116,8 +143,6 @@ function conversion(money_in) {
 function getBitCoinInfo(amountToBeConverted) {
 
 		var bitcoinValue;
-
-
 		jQuery.getJSON('/bitcoin', function (data) {
 				console.log("JSON: " + data);
 				var roundedBitCoinValue = data;
@@ -129,6 +154,7 @@ function getBitCoinInfo(amountToBeConverted) {
 				console.log(typeof(amountToBeConverted))
 				console.log(bitcoinValue)
 				display(numBitcoins.toPrecision(5));
+				bitcoin_bar(numBitcoins.toPrecision(5));
 		});
 
 }
