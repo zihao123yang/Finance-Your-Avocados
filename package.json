@@ -1,0 +1,11 @@
+{
+  "name": "Something about avacados",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
