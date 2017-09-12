@@ -24,6 +24,11 @@ body {
   color: solid black;
 }
 
+.icon {
+  height: 150px;
+  width: 150px;
+}
+
 .search-field{
   background-color: #cec9c6 !important;
   border-radius: 10px !important;
