@@ -38,7 +38,7 @@ body {
 
 /*This styles the search text before input*/
 .search-field::placeholder{
-  color: #768267;
+  color: #000;
 }
 
 
