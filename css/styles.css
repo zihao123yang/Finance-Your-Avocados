@@ -3,9 +3,27 @@
   width: 0;
 }
 
+.header {
+  font-family: 'Lobster', cursive;
+  font-size: 9em;
+}
+
 .background {
   color: solid black;
 }
+
+.search-field{
+  background-color: #E9E9E9 !important;
+  border-radius: 10px !important;
+  padding-left: 10px !important;
+  color: #000 !important;
+  border-top-right-radius:3px;
+  border-top-left-radius:3px;
+  border-bottom-right-radius3px;
+  border-bottom-left-radius:3px;
+  margin:3 3 3 3;
+}
+
 .img {
   width: 45px;
   left: -20px;
@@ -13,6 +31,10 @@
   position: absolute;
   transition: all 0.5s linear;
 }
+
+
+
+/* random icons */
 .avocado {
   width: 200px;
   position: relative;
