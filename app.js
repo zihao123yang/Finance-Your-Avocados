@@ -3,18 +3,6 @@
   const express = require('express')
   const app = express()
 
-  var admin = require("firebase");
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAdAQqI-ZbkJ4aszMsvhPznUZrJAAOr_VQ",
-    authDomain: "finance-your-avocados.firebaseapp.com",
-    databaseURL: "https://finance-your-avocados.firebaseio.com",
-    projectId: "finance-your-avocados",
-    storageBucket: "finance-your-avocados.appspot.com",
-    messagingSenderId: "788363411557"
-  };
-  firebase.initializeApp(config);
   var cache={timestamp: 0, value: -1};
 
 
