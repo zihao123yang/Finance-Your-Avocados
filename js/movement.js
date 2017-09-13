@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
   avocadoContainer = document.querySelector('.avocado');
   bitCoinContainer = document.querySelector('.bitCoin');
   houseContainer = document.querySelector('.house');
-  updateMarketValue(50, avocadoContainer);
+  updateMarketValue(money_avo_bar(), avocadoContainer);
   updateMarketValue(bitcoin_bar2(), bitCoinContainer)
   console.log(bitcoin_bar2(), "yo")
   updateMarketValue(money_house_bar() , houseContainer);

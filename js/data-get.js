@@ -5,9 +5,9 @@ var cache = {timestamp : 0, value : -1};
 function money_avo(money){
 	var avo_perkg = 12.95;
 	var kg = money/avo_perkg;
-	var no_avos = Math.floor(kg/0.17);
+	var no_avos = (kg/0.17);
 
-	return no_avos;
+	return no_avos.toFixed(2);
 }
 
 function money_house(){
@@ -20,6 +20,23 @@ function money_house(){
 }
 
 <!--display bar value functions-->
+function money_avo_bar(){
+	var regex = /searchbar=(.+)&/;
+	var url = window.location.href;
+	var amount = parseInt(url.match(regex)[1]);
+	var avo_perkg = 12.95;
+	var kg = amount/avo_perkg;
+	var no_avos = (kg/0.17);
+	console.log(no_avos, "avosz!")
+	if (no_avos > 1) {
+		no_avos = 100;
+	}
+	if (no_avos < 1) {
+		no_avos = no_avos * 100;
+	}
+	return (no_avos);
+}
+
 function money_house_bar(){
 	var regex = /searchbar=(.+)&/;
 	var url = window.location.href;
