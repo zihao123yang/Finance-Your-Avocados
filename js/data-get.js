@@ -38,8 +38,31 @@ function bitcoin_bar(bit_amount){
 		bit_amount = 100;
 		console.log(bit_amount, "bit amount bar 100")
 	}
+	else {
+		bit_amount = 50;
+	}
 	console.log(bit_amount, "bit amount bar < 100")
 	return bit_amount;
+}
+
+function bitcoin_bar2() {
+	var bitcoinValue;
+	var regex = /searchbar=(.+)&/;
+	var url = window.location.href;
+	var amountToBeConverted = parseInt(url.match(regex)[1]);
+	var numBitcoins;
+	jQuery.getJSON('/bitcoin', function (data) {
+			console.log("JSON: " + data);
+			var roundedBitCoinValue = data;
+
+			console.log("from server2: " + roundedBitCoinValue);
+			//bitcoinValue = roundedBitCoinValue;
+			bitcoinValue = parseInt(roundedBitCoinValue);
+			numBitcoins = (amountToBeConverted/bitcoinValue);
+			numBitcoins = numBitcoins.toFixed(1)
+			console.log(numBitcoins, "Hii")
+	});
+	return parseInt(numBitcoins);
 }
 <!--end bar value functions-->
 
@@ -154,7 +177,6 @@ function getBitCoinInfo(amountToBeConverted) {
 				console.log(typeof(amountToBeConverted))
 				console.log(bitcoinValue)
 				display(numBitcoins.toPrecision(5));
-				bitcoin_bar(numBitcoins.toPrecision(5));
 		});
 
 }

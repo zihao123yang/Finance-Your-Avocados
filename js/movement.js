@@ -10,21 +10,14 @@
 // }, 100)
 // }
 
-function get_Amount() {
-  var regex = /searchbar=(.+)&/;
-  var url = window.location.href;
-  var amount = parseInt(url.match(regex)[1]);
-  return amount;
-  console.log(amount, "get_amount ")
-}
-
 var avocadoContainer;
 document.addEventListener('DOMContentLoaded', function(){
   avocadoContainer = document.querySelector('.avocado');
   bitCoinContainer = document.querySelector('.bitCoin');
   houseContainer = document.querySelector('.house');
   updateMarketValue(50, avocadoContainer);
-  updateMarketValue(bitcoin_bar(get_Amount()), bitCoinContainer)
+  updateMarketValue(bitcoin_bar2(), bitCoinContainer)
+  console.log(bitcoin_bar2(), "yo")
   updateMarketValue(money_house_bar() , houseContainer);
 });
 
