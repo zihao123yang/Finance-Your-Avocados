@@ -49,37 +49,17 @@ function money_house_bar(){
 	return (house_percent);
 }
 
-function bitcoin_bar(bit_amount){
-	bit_amount = bit_amount * 100
-	if (bit_amount > 100) {
-		bit_amount = 100;
-		console.log(bit_amount, "bit amount bar 100")
-	}
-	else {
-		bit_amount = 50;
-	}
-	console.log(bit_amount, "bit amount bar < 100")
-	return bit_amount;
-}
-
-function bitcoin_bar2() {
-	var bitcoinValue;
+function money_bitcoin_bar(){
 	var regex = /searchbar=(.+)&/;
 	var url = window.location.href;
-	var amountToBeConverted = parseInt(url.match(regex)[1]);
-	var numBitcoins;
-	jQuery.getJSON('/bitcoin', function (data) {
-			console.log("JSON: " + data);
-			var roundedBitCoinValue = data;
-
-			console.log("from server2: " + roundedBitCoinValue);
-			//bitcoinValue = roundedBitCoinValue;
-			bitcoinValue = parseInt(roundedBitCoinValue);
-			numBitcoins = (amountToBeConverted/bitcoinValue);
-			numBitcoins = numBitcoins.toFixed(1)
-			console.log(numBitcoins, "Hii")
-	});
-	return parseInt(numBitcoins);
+	var amount = parseInt(url.match(regex)[1]);
+	bit_percent= (amount*100)/5329;
+	if (bit_percent > 100) {
+		bit_percent = 100;
+		console.log(bit_percent, "bit amount bar 100")
+	}
+	console.log(bit_percent, "bit amount bar < 100")
+	return bit_percent;
 }
 
 
@@ -139,17 +119,17 @@ function conversion() {
 }
 
 function display(numBitcoins) {
-	$( "#bitcoin" ).text(numBitcoins + " Bitcoins" );
+	$( "#bitcoin" ).text(numBitcoins + " Bitcoin(s)" );
 	console.log("bitcoins displaying correctly ")
 }
 
 function displayAvo(noAvo) {
-	$( "#avo" ).text(noAvo + " Avocados" );
+	$( "#avo" ).text(noAvo + " Avocado(s)" );
 	console.log("avocados displaying correctly ")
 }
 
 function displayHouse(house) {
-	$( "#house" ).text(house + "% of a house" );
+	$( "#house" ).text(house + "% of a house(s)" );
 	console.log("house displaying correctly ")
 }
 
