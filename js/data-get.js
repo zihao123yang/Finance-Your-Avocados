@@ -19,7 +19,7 @@ function money_house(){
 	return (house_percent);
 }
 
-<!--display bar value functions-->
+
 function money_house_bar(){
 	var regex = /searchbar=(.+)&/;
 	var url = window.location.href;
@@ -64,7 +64,7 @@ function bitcoin_bar2() {
 	});
 	return parseInt(numBitcoins);
 }
-<!--end bar value functions-->
+
 
 
 function avo_money(no_avos){
