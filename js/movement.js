@@ -12,15 +12,12 @@
 
 var avocadoContainer;
 document.addEventListener('DOMContentLoaded', function(){
-
   avocadoContainer = document.querySelector('.avocado');
   bitCoinContainer = document.querySelector('.bitCoin');
   houseContainer = document.querySelector('.house');
-  updateMarketValue(50, avocadoContainer);
-  updateMarketValue(60, bitCoinContainer);
-  updateMarketValue(80, houseContainer);
-
-
+  updateMarketValue(money_avo_bar(), avocadoContainer);
+  updateMarketValue(money_bitcoin_bar(), bitCoinContainer)
+  updateMarketValue(money_house_bar() , houseContainer);
 });
 
 function updateMarketValue(percentage, container) {
